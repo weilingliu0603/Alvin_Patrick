@@ -1,5 +1,6 @@
 import sqlite3
 import flask
+
 def get_months():
     db = get_db()
     rows = db.execute("SELECT DISTINCT date FROM Transactions")
@@ -137,7 +138,5 @@ def searchmonthly():
     db.close()
     return flask.render_template('searchmonthly.html',rows=rows,total=total,year=year,month=month)
 
-if __name__== '__main__':
-    app.run(port = 3130,debug=True)
-app.run(debug=True)
-
+if __name__ == '__main__':
+    app.run(debug=True, use_reloader=True)
