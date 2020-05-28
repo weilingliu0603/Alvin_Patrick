@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>View member's history</title>
+</head>
+<h1 align="center"><a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='jpjc salon database.png') }}"  width="500" height="500" alt="JPJC salon Database"></a></h1>
+<h1 align='center'>{{g}}'s history<h1>
+<br><br>
+<table border = '1' align='center'>
+		<tr >
+			<th align='center'><b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Name&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</b></th>
+			<th align='center'><b>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Date&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</b></th>
+			<th align='center'><b>&ensp;&ensp;Total Amount&ensp;&ensp;</b></th>
+		</tr>
+		{% for row in rows %}
+      <tr>
+        <td>{{ row['name'] }}</td>
+        <td>{{ row['date'] }}</td>
+        <td> $ {{ row['totalamount'] }}</td>
+      </tr>
+		{% endfor %}
+</table>
+</html>

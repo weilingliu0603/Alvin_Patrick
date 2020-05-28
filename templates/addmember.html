@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Add member</title>
+</head>
+<h1 align="center"><a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='jpjc salon database.png') }}"  width="500" height="500" alt="JPJC salon Database"></a></h1>
+
+<body>
+<form action="{{ url_for('memberadded') }}" method="POST">
+    MemberName&ensp;&ensp; <input name = 'memberName' value = "enter the new member's name">
+<br><br>
+  Gender&ensp;&ensp;<input name = 'gender' value = "enter gender">
+<br><br>
+Email&ensp;&ensp;<input name = 'email' value = "enter email">
+<br><br>
+   Contact&ensp;&ensp;<input name = 'contact' value = "enter contact">
+<br><br>
+Address&ensp;&ensp;<input name = 'address' value = "enter address">
+<br><br>
+    <input type="submit" value = "add">
+    </form>
+</body>
+</html>

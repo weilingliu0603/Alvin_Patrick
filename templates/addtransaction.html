@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Add Transaction</title>
+</head>
+<h1 align="center"><a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='jpjc salon database.png') }}"  width="500" height="500" alt="JPJC salon Database"></a></h1>
+
+<body>
+<form action="{{ url_for('transactionadded') }}" method="POST">
+    Name:&ensp;&ensp; <input name = 'name' value = "enter name">
+<br><br>
+  Date:(yyyy-mm-dd)&ensp;&ensp;<input name = 'date' value = "enter date">
+<br><br>
+Member ID:(if applicable)&ensp;&ensp;<input name = 'memid' value = "enter member's ID">
+<br><br>
+<label>Choose a service</label>
+<br>
+<input type='checkbox' name='styles' value='cut1'>Cut(short length)</input>
+<br>
+<input type='checkbox' name='styles' value='cut2'>Cut(medium length)</input>
+<br>
+<input type='checkbox' name='styles' value='cut3'>Cut(long length)</input>
+<br>
+<input type='checkbox' name='styles' value='colour'>Colour</input>
+<br>
+<input type='checkbox' name='styles' value='high1'>Highlight(half head)</input>
+<br>
+<input type='checkbox' name='styles' value='high2'>Highlight(full head)</input>
+<br>
+<input type='checkbox' name='styles' value='perm'>Perm</input>
+<br>
+<input type='checkbox' name='styles' value='rebond'>Rebonding</input>
+<br>
+<input type='checkbox' name='styles' value='treat'>Treatment</input>
+<br>
+
+
+    <input type="submit" value = "add">
+   </form>
+</body>
+</html>

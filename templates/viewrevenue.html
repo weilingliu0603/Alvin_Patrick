@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>View Monthly Sales Revenue</title>
+</head>
+<h1 align="center"><a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='jpjc salon database.png') }}"  width="500" height="500" alt="JPJC salon Database"></a></h1>
+
+<form action="{{ url_for('searchmonthly') }}" method="POST">
+
+<label for="choice">Choose year and month</label>
+<select name="choice">
+ {% for i in range(lst|length)%}
+  <option name="choice" value={{lst[i]}}>{{lst[i]}}</option>
+ {% endfor %}
+</select>
+
+
+<br>
+<input type="submit" value = "Search">
+</form>
+</html>

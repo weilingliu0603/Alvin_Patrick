@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+	<title>Welcome to JPJC salon</title>
+</head>
+<style>
+th, td {padding: 15px;}
+th{font-family:oswald; color:orange;}
+
+</style>
+
+<h1 align="center"><a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='jpjc salon database.png') }}"  width="500" height="500" alt="JPJC salon Database"></a></h1>
+
+<body>
+	
+
+	<table align='center' width="400" height="300" border="0">
+		<tr>
+			<th>Add a new member</th>
+			<th>Add a new business transaction</th>
+			<th>Update a member</th>
+			<th>View daily transaction</th>
+			<th>View monthly sales revenue</th>
+			<th>View member's transaction history</th>
+		</tr>
+		<tr>
+			<th><a href="{{url_for('addmember')}}"><img src="{{ url_for('static', filename='additem.png')}}" width="146" height="197" alt='unavailable-image'/></a></th>
+			<th><a href="{{url_for('addtransaction')}}"><img src="{{url_for('static', filename='Add Transaction.png')}}" width="146" height="197" alt='unavailable-image'/></a></th>
+			<th><a href="{{url_for('updatemember')}}"><img src="{{url_for('static', filename='Update member.png')}}" width="146" height="197" alt='unavailable-image'/></a></th>
+			<th><a href="{{url_for('viewdailyTransaction')}}"><img src="{{url_for('static', filename='View Daily Transaction.png')}}" width="146" height="197" alt='unavailable-image'/></a></th>
+			<th><a href="{{url_for('viewrevenue')}}"><img src="{{url_for('static', filename='View Monthly Tranc.png')}}" width="146" height="197" alt='unavailable-image'/></a></th>
+			<th><a href="{{url_for('viewhistory')}}"><img src="{{url_for('static', filename='View Memb tracs.png')}}" width="146" height="197" alt='unavailable-image'/></a></th>
+			
+		</tr>
+		
+	</table>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title>View Daily Transaction</title>
+</head>
+<h1 align="center"><a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='jpjc salon database.png') }}"  width="500" height="500" alt="JPJC salon Database"></a></h1>
+<form action="{{ url_for('viewtransaction') }}" method="POST">
+<br><br>
+Enter date to view transaction:(dd/mm/yyyy)&ensp;&ensp; <input name = 'date' value = "enter date">
+<br><br>
+<input type="submit" value = "Search">
+</form>
+
+</html>

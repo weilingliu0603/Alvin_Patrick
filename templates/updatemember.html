@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Update member</title>
+<h1 align="center"><a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='jpjc salon database.png') }}"  width="500" height="500" alt="JPJC salon Database"></a></h1>
+
+<body>
+<form action="{{ url_for('updated') }}" method="POST">
+MemberID:&ensp;&ensp; <input name = 'mem' value = "enter the member's ID to be updated">
+<br><br>
+New Email:(if unchanged type '-')&ensp;&ensp;<input name = 'email' value = "enter new email">
+<br><br>
+New Contact:(if unchanged type '-')&ensp;&ensp;<input name = 'contact' value = "enter new contact">
+<br><br>
+    <input type="submit" value = "Update">
+    </form>
+</body>
+</html>

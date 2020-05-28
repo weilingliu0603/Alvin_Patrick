@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>View Monthly Sales Revenue</title>
+</head>
+<h1 align="center"><a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='jpjc salon database.png') }}"  width="500" height="500" alt="JPJC salon Database"></a></h1>
+<br><br>
+<h2 align='center'>Revenue details for {{month}} {{year}}</h2>
+<br><br>
+<table border='1' align='center'>
+	<tr>
+		<th align='center'>&ensp;&ensp;&ensp;Invoice ID&ensp;&ensp;&ensp;</th>
+		<th align='center'>&ensp;&ensp;&ensp;&ensp;Total amount &ensp;&ensp;&ensp;&ensp;</th>
+	</tr>
+	{% for row in rows %}
+		<tr>
+			<td align='center'>{{row['invoiceID']}}</td>
+			<td align='center'>{{row['totalamount']}}</td>
+		</tr>
+	{% endfor %}
+</table>
+<br><br>
+<h2><b>The total revenue for {{month}} {{year}} is $ {{total}}</b></h2>
+</html>

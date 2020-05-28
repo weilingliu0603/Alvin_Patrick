@@ -1,0 +1,12 @@
+<html>
+<head>
+	<title>View member's history</title>
+</head>
+<h1 align="center"><a href="{{url_for('home')}}"><img src="{{ url_for('static', filename='jpjc salon database.png') }}"  width="500" height="500" alt="JPJC salon Database"></a></h1>
+<form action="{{ url_for('memberhistory') }}" method="POST">
+<br><br>
+    Member ID:&ensp;&ensp; <input name = 'mem' value = "enter member ID to view history">
+	<br>
+	<input type="submit" value = "Search">
+</form>
+</html>
